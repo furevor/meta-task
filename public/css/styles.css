@@ -1,0 +1,303 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto/Roboto-Regular.ttf");
+}
+
+html {
+    background-image: url("../img/pattern-01.png");
+    box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.5);
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding:0 !important;
+    border:0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+.main-header {
+    display: flex;
+    height: 100px;
+}
+
+.header-logo {
+    display: flex;
+    margin: auto auto 0;
+    fill: url(#bluepattern);
+}
+
+.header-logo svg {
+    width: 200px;
+    height: 36px;
+}
+
+.phone-models-view {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.models-generation {
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 32px;
+    color: #555555;
+
+    margin: 25px 0 10px;
+}
+
+.phones-description {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 26px;
+    color: #828282;
+
+    margin-bottom: 36px;
+}
+
+.phone-list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.phone-list > li {
+    width: 270px;
+    height: 440px;
+    box-shadow: 0 1px 4px rgba(130, 130, 130, 0.04), 0 3px 10px rgba(130, 130, 130, 0.1);
+    border-radius: 1px;
+    background-color: #ffffff;
+    margin-right: 40px;
+}
+
+.phone-list > li:last-child {
+    margin-right: 0;
+}
+
+.phone-list > li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-end;
+
+    text-decoration: none;
+}
+
+.phone-colors {
+    padding: 0;
+    margin: 0 0 25px;
+    list-style: none;
+}
+
+.phone-colors li {
+    display: inline-block;
+    margin: 0 3px;
+}
+
+.phone-colors li:last-child {
+    margin: 0;
+}
+
+.phone-card img {
+    margin-bottom: 10px;
+}
+
+.phone-color-name {
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #bebebe;
+
+    margin-bottom: 10px;
+}
+
+.phone-name {
+    font-size: 22px;
+    font-weight: 300;
+    color: #82828c;
+
+    margin-bottom: 3px;
+}
+
+.phone-price {
+    font-size: 22px;
+    font-weight: 300;
+    color: #ff4e00;
+
+    margin-bottom: 40px
+}
+
+.rub {
+    font-size: inherit;
+    margin: 0 2px;
+    color: inherit;
+    position: relative;
+}
+
+.rub:after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 50%;
+    height: 8%;
+    top: auto;
+    bottom: 32%;
+    left: 0;
+    background: #ff4e00;
+}
+
+/* <-- styles for phone color radio buttons*/
+.radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    margin: 10px 0 0 7px;
+}
+
+.radio + label {
+    position: relative;
+    padding: 0 0 0 35px;
+    cursor: pointer;
+}
+
+.radio + label:before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 26px;
+    height: 26px;
+    border: 1px solid #CDD1DA;
+    border-radius: 50%;
+    opacity: 0;
+    background: #FFF;
+}
+
+.radio + label:after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 4px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #9FD468;
+    opacity: 1;
+    transition: .2s;
+}
+
+.radio:checked + label:before {
+    opacity: 1;
+}
+
+.radio:hover + label:before {
+    opacity: 1;
+    transition: .2s;
+}
+
+.radio-black + label:after {
+    background: #232323;
+}
+
+.radio-blue + label:after {
+    background: #3d69df;
+}
+
+.radio-gold + label:after {
+    background: #c7b299;
+}
+
+.radio-gray + label:after {
+    background: #bebec8;
+}
+
+/*styles for phone color radio buttons --> */
+
+.main-footer {
+    margin-top: auto;
+    text-align: center;
+}
+
+.main-footer p {
+    color: #82828c;
+    font-size: 11px;
+}
+
+.footnote {
+    margin-bottom: 18px;
+}
+
+.copyright {
+    margin-bottom: 42px;
+}
+
+.one-description {
+    vertical-align: super;
+    color: #3491cd;
+    font-size: 10px;
+}
+
+.one-footer {
+    vertical-align: super;
+    font-size: 7px;
+}
+
+.search-wrap {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+
+    width: 0px;
+    height: 35px;
+    line-height: 35px;
+    background: transparent;
+
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+
+.search-field {
+    border: 0;
+    background: transparent;
+    width: 0%;
+    outline: none;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.search-wrap img {
+    position: absolute;
+    right: 5px;
+    top: 8px;
+    cursor: pointer;
+}
+
+.search-wrap.active{
+    width: 250px;
+    padding-left: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: all 0.5s ease;
+}
+
+.search-field.active{
+    width: 98%;
+    padding-left: 5px;
+    transition: all 0.5s 0.8s ease;
+}

@@ -1,0 +1,18 @@
+{
+  "blue": {
+    "colorName": "Синий",
+    "imgURL": "img/m6_note_blue.png"
+  },
+  "gray": {
+    "colorName": "Серый",
+    "imgURL": "img/meizu_gray.jpg"
+  },
+  "gold": {
+    "colorName": "Золото",
+    "imgURL": "img/m6s_gold.png"
+  },
+  "black": {
+    "colorName": "Черный",
+    "imgURL": "img/m6_black.png"
+  }
+}
